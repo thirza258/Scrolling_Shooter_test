@@ -65,6 +65,21 @@ public class GameObjectFactory {
                 case "BackgroundSpawnComponent":
                     object.setSpawner(new BackgroundSpawnComponent());
                     break;
+                case "AlienChaseMovementComponent":
+                    object.setMovement(new AlienChaseComponent(mGameEngineReference));
+                    break;
+                case "AlienPatrolMovementComponent":
+                    object.setMovement(new AlienPatrolMovementComponent(mGameEngineReference));
+                    break;
+                case "AlienDiverMovementComponent":
+                    object.setMovement(new AlienDiverMovementComponent());
+                    break;
+                case "AlienHorizontalSpawnComponent":
+                    object.setSpawner(new AlienHorizontalSpawnComponent());
+                    break;
+                case "AlienVerticalSpawnComponent":
+                    object.setSpawner(new AlienVerticalSpawnComponent());
+                    break;
                 default:
                     //error unidentified component
                     break;
